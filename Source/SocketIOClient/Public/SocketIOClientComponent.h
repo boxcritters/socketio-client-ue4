@@ -171,6 +171,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "SocketIO Functions")
 	void Emit(const FString& EventName, USIOJsonValue* Message = nullptr, const FString& Namespace = TEXT("/"));
 
+	UFUNCTION(BlueprintCallable, Category = "SocketIO Functions")
+		void EmitWithMore(const FString& EventName, TArray<USIOJsonValue*> MoreThanOneMessage, const FString& Namespace = TEXT("/"));
+
 	/**
 	* Emit an event with a JsonValue message with a callback function defined by CallBackFunctionName
 	*

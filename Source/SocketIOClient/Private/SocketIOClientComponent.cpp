@@ -449,6 +449,11 @@ void USocketIOClientComponent::Emit(const FString& EventName, USIOJsonValue* Mes
 	NativeClient->Emit(EventName, JsonMessage, nullptr, Namespace);
 }
 
+void USocketIOClientComponent::EmitWithMore(const FString& EventName, TArray<USIOJsonValue*> MoreThanOneMessage, const FString& Namespace)
+{
+
+}
+
 void USocketIOClientComponent::EmitWithCallBack(const FString& EventName, USIOJsonValue* Message /*= nullptr*/, const FString& CallbackFunctionName /*= FString(TEXT(""))*/, UObject* Target /*= nullptr*/, const FString& Namespace /*= FString(TEXT("/"))*/, UObject* WorldContextObject /*= nullptr*/)
 {
 	if (!CallbackFunctionName.IsEmpty())
